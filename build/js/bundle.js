@@ -22486,7 +22486,7 @@ exports = module.exports = __webpack_require__(189)(undefined);
 
 
 // module
-exports.push([module.i, ".greeting-hello, .greeting-goodbye, .greeting-hey {\n  font-family: \"Avenir\";\n  font-size: 18;\n  font-weight: 500;\n  padding: 20px;\n  border-radius: 10px;\n  box-shadow: none;\n  transition: 0.5s all; }\n  .greeting-hello:hover, .greeting-goodbye:hover, .greeting-hey:hover {\n    box-shadow: 0 7px 0px; }\n\n.greeting-hello {\n  color: #8ea6e6;\n  background-color: #0e349a; }\n\n.greeting-goodbye {\n  color: #bc7fdc;\n  background-color: #59107f; }\n\n.greeting-hey {\n  color: #7fdcc6;\n  background-color: #107f64; }\n", ""]);
+exports.push([module.i, ".greetingHello {\n  color: #8ea6e6;\n  background-color: #0e349a;\n  font-family: \"Avenir\";\n  font-size: 18;\n  font-weight: 500;\n  padding: 20px;\n  border-radius: 10px;\n  box-shadow: none;\n  transition: 0.5s all; }\n\n.greetingGoodbye {\n  color: #bc7fdc;\n  background-color: #59107f;\n  font-family: \"Avenir\";\n  font-size: 18;\n  font-weight: 500;\n  padding: 20px;\n  border-radius: 10px;\n  box-shadow: none;\n  transition: 0.5s all; }\n\n.greetingHey {\n  color: #7fdcc6;\n  background-color: #107f64;\n  font-family: \"Avenir\";\n  font-size: 18;\n  font-weight: 500;\n  padding: 20px;\n  border-radius: 10px;\n  box-shadow: none;\n  transition: 0.5s all; }\n", ""]);
 
 // exports
 

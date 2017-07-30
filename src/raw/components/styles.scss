@@ -19,7 +19,7 @@ $hey-color: lighten(#34c19f, 20%);
 .greeting-hello {
     @extend %greeting;
     color: $hello-color;
-    background-color: darken(saturate($hello-color, 20%), 40%); //#122a6b;
+    background-color: darken(saturate($hello-color, 20%), 40%);
 }
 
 .greeting-goodbye {
