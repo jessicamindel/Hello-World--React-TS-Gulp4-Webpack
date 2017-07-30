@@ -9,7 +9,6 @@ export interface IGreetingProps {
     greeting: GreetingPreset;
 }
 
-// FIXME: Update VSCode's TypeScript version to 2.4+.
 export enum GreetingPreset {
     hello = "hello",
     goodbye = "goodbye",

@@ -1,7 +1,4 @@
-.test {
-  color: blue; }
-
-div[class^="greeting-"] {
+.greeting-hello, .greeting-goodbye, .greeting-hey {
   font-family: "Avenir";
   font-size: 18;
   font-weight: 500;
@@ -9,14 +6,17 @@ div[class^="greeting-"] {
   border-radius: 10px;
   box-shadow: none;
   transition: 0.5s all; }
-  div[class^="greeting-"].greeting-hello {
-    color: #8ea6e6;
-    background-color: #0e349a; }
-  div[class^="greeting-"].greeting-goodbye {
-    color: #bc7fdc;
-    background-color: #59107f; }
-  div[class^="greeting-"].greeting-hey {
-    color: #7fdcc6;
-    background-color: #107f64; }
-  div[class^="greeting-"]:hover {
+  .greeting-hello:hover, .greeting-goodbye:hover, .greeting-hey:hover {
     box-shadow: 0 7px 0px; }
+
+.greeting-hello {
+  color: #8ea6e6;
+  background-color: #0e349a; }
+
+.greeting-goodbye {
+  color: #bc7fdc;
+  background-color: #59107f; }
+
+.greeting-hey {
+  color: #7fdcc6;
+  background-color: #107f64; }
