@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Greeting } from "./components/greetings/greetings";
+import { Greeting, GreetingPreset } from "./components/greetings/greetings";
 
 // region :: Previous rendition of code: Rendered a simple hello world message.
     // const style = {
@@ -19,11 +19,11 @@ const root = document.getElementById("react-container");
 
 ReactDOM.render(
     <div>
-        <Greeting greeting="hello" />
+        <Greeting greeting={GreetingPreset.hello} />
         <br/>
-        <Greeting greeting="goodbye" />
+        <Greeting greeting={GreetingPreset.goodbye} />
         <br/>
-        <Greeting greeting="hey" />
+        <Greeting greeting={GreetingPreset.hey} />
     </div>,
     root
 );

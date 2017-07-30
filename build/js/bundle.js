@@ -9752,25 +9752,20 @@ module.exports = __webpack_require__(83);
 
 /***/ }),
 /* 83 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__ = __webpack_require__(185);
-
-
-
-const root = document.getElementById("react-container");
-__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
-    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__["a" /* Greeting */], { greeting: "hello" }),
-    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__["a" /* Greeting */], { greeting: "goodbye" }),
-    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__["a" /* Greeting */], { greeting: "hey" })), root);
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(49), __webpack_require__(99), __webpack_require__(185)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, React, ReactDOM, greetings_1) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    const root = document.getElementById("react-container");
+    ReactDOM.render(React.createElement("div", null,
+        React.createElement(greetings_1.Greeting, { greeting: greetings_1.GreetingPreset.hello }),
+        React.createElement("br", null),
+        React.createElement(greetings_1.Greeting, { greeting: greetings_1.GreetingPreset.goodbye }),
+        React.createElement("br", null),
+        React.createElement(greetings_1.Greeting, { greeting: greetings_1.GreetingPreset.hey })), root);
+}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 
 /***/ }),
@@ -22401,43 +22396,36 @@ module.exports = ReactDOMInvalidARIAHook;
 
 /***/ }),
 /* 185 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/* unused harmony export GreetingPreset */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__presets_json__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__presets_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__presets_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_css__ = __webpack_require__(187);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_css__);
-
-
-
-console.log(__WEBPACK_IMPORTED_MODULE_2__styles_css__);
-var GreetingPreset;
-(function (GreetingPreset) {
-    GreetingPreset[GreetingPreset["hello"] = 0] = "hello";
-    GreetingPreset[GreetingPreset["goodbye"] = 1] = "goodbye";
-    GreetingPreset[GreetingPreset["hey"] = 2] = "hey";
-})(GreetingPreset || (GreetingPreset = {}));
-let greetStyleMap = new Map();
-greetStyleMap.set(GreetingPreset.hello, __WEBPACK_IMPORTED_MODULE_2__styles_css__["greetingHello"]);
-greetStyleMap.set(GreetingPreset.goodbye, __WEBPACK_IMPORTED_MODULE_2__styles_css__["greetingGoodbye"]);
-greetStyleMap.set(GreetingPreset.hey, __WEBPACK_IMPORTED_MODULE_2__styles_css__["greetingHey"]);
-class Greeting extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
-    constructor(props) {
-        super(props);
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__, exports, __webpack_require__(49), __webpack_require__(186), __webpack_require__(187)], __WEBPACK_AMD_DEFINE_RESULT__ = function (require, exports, React, presets_json_1, styles) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    console.log(styles);
+    var GreetingPreset;
+    (function (GreetingPreset) {
+        GreetingPreset["hello"] = "hello";
+        GreetingPreset["goodbye"] = "goodbye";
+        GreetingPreset["hey"] = "hey";
+    })(GreetingPreset = exports.GreetingPreset || (exports.GreetingPreset = {}));
+    let greetStyleMap = new Map();
+    greetStyleMap.set(GreetingPreset.hello, styles.greetingHello);
+    greetStyleMap.set(GreetingPreset.goodbye, styles.greetingGoodbye);
+    greetStyleMap.set(GreetingPreset.hey, styles.greetingHey);
+    class Greeting extends React.Component {
+        constructor(props) {
+            super(props);
+        }
+        render() {
+            let greetName = this.props.greeting.toString();
+            let greetText = presets_json_1.default[greetName];
+            let s = greetStyleMap.get(this.props.greeting);
+            return (React.createElement("div", { className: s }, greetText));
+        }
     }
-    render() {
-        let greetName = this.props.greeting.toString();
-        let greetText = __WEBPACK_IMPORTED_MODULE_1__presets_json___default.a[greetName];
-        let s = greetStyleMap.get(this.props.greeting);
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: s }, greetText));
-    }
-}
-/* harmony export (immutable) */ __webpack_exports__["a"] = Greeting;
-
+    exports.Greeting = Greeting;
+}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 
 /***/ }),
@@ -22486,7 +22474,7 @@ exports = module.exports = __webpack_require__(189)(undefined);
 
 
 // module
-exports.push([module.i, ".potato {\n  color: blue; }\n\ndiv[class^=\"greeting-\"] {\n  font-family: \"Avenir\";\n  font-size: 18;\n  font-weight: 500;\n  padding: 20px;\n  border-radius: 10px;\n  box-shadow: none;\n  transition: 0.5s all; }\n  div[class^=\"greeting-\"].greeting-hello {\n    color: #8ea6e6;\n    background-color: #0e349a; }\n  div[class^=\"greeting-\"].greeting-goodbye {\n    color: #bc7fdc;\n    background-color: #59107f; }\n  div[class^=\"greeting-\"].greeting-hey {\n    color: #7fdcc6;\n    background-color: #107f64; }\n  div[class^=\"greeting-\"]:hover {\n    box-shadow: 0 7px 0px; }\n", ""]);
+exports.push([module.i, ".test {\n  color: blue; }\n\ndiv[class^=\"greeting-\"] {\n  font-family: \"Avenir\";\n  font-size: 18;\n  font-weight: 500;\n  padding: 20px;\n  border-radius: 10px;\n  box-shadow: none;\n  transition: 0.5s all; }\n  div[class^=\"greeting-\"].greeting-hello {\n    color: #8ea6e6;\n    background-color: #0e349a; }\n  div[class^=\"greeting-\"].greeting-goodbye {\n    color: #bc7fdc;\n    background-color: #59107f; }\n  div[class^=\"greeting-\"].greeting-hey {\n    color: #7fdcc6;\n    background-color: #107f64; }\n  div[class^=\"greeting-\"]:hover {\n    box-shadow: 0 7px 0px; }\n", ""]);
 
 // exports
 

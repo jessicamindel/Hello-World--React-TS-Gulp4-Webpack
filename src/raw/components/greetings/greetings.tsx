@@ -9,10 +9,11 @@ export interface IGreetingProps {
     greeting: GreetingPreset;
 }
 
+// FIXME: Update VSCode's 
 export enum GreetingPreset {
-    hello,
-    goodbye,
-    hey
+    hello = "hello",
+    goodbye = "goodbye",
+    hey = "hey"
 }
 
 let greetStyleMap = new Map<GreetingPreset, string>();
@@ -26,7 +27,8 @@ export class Greeting extends React.Component<IGreetingProps, {}> {
     }
 
     public render() {
-        let greetName = this.props.greeting.toString();
+        // FIXME: Somehow, this interprets GreetingPreset as a set of numerical values, so... greetings[greetName] is going to just be a number. This breaks everything.
+        let greetName = this.props.greeting.toString(); // Should be the greeting value...
         let greetText = greetings[greetName];
         let s = greetStyleMap.get(this.props.greeting);
 
