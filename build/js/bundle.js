@@ -9752,25 +9752,26 @@ module.exports = __webpack_require__(83);
 
 /***/ }),
 /* 83 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__ = __webpack_require__(185);
 
 
-var _react = __webpack_require__(49);
 
-var React = _interopRequireWildcard(_react);
+const root = document.getElementById("react-container");
+__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", null,
+    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__["a" /* Greeting */], { greeting: __WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__["b" /* GreetingPreset */].goodbye }),
+    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
+    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__["a" /* Greeting */], { greeting: __WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__["b" /* GreetingPreset */].goodbye }),
+    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
+    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__["a" /* Greeting */], { greeting: __WEBPACK_IMPORTED_MODULE_2__components_greetings_greetings__["b" /* GreetingPreset */].hey })), root);
 
-var _reactDom = __webpack_require__(99);
-
-var ReactDOM = _interopRequireWildcard(_reactDom);
-
-var _greetings = __webpack_require__(185);
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-var root = document.getElementById("react-container");
-ReactDOM.render(React.createElement("div", null, React.createElement(_greetings.Greeting, { greeting: _greetings.GreetingPreset.hello }), React.createElement("br", null), React.createElement(_greetings.Greeting, { greeting: _greetings.GreetingPreset.goodbye }), React.createElement("br", null), React.createElement(_greetings.Greeting, { greeting: _greetings.GreetingPreset.hey })), root);
 
 /***/ }),
 /* 84 */
@@ -22400,73 +22401,43 @@ module.exports = ReactDOMInvalidARIAHook;
 
 /***/ }),
 /* 185 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return GreetingPreset; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__presets_json__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__presets_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__presets_json__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_scss__);
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Greeting = exports.GreetingPreset = undefined;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(49);
-
-var React = _interopRequireWildcard(_react);
-
-var _presets = __webpack_require__(186);
-
-var _presets2 = _interopRequireDefault(_presets);
-
-var _styles = __webpack_require__(187);
-
-var styles = _interopRequireWildcard(_styles);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-console.log(styles);
-var GreetingPreset = exports.GreetingPreset = undefined;
+var GreetingPreset;
 (function (GreetingPreset) {
     GreetingPreset["hello"] = "hello";
     GreetingPreset["goodbye"] = "goodbye";
     GreetingPreset["hey"] = "hey";
-})(GreetingPreset || (exports.GreetingPreset = GreetingPreset = {}));
-var greetStyleMap = new Map();
-greetStyleMap.set(GreetingPreset.hello, styles.greetingHello);
-greetStyleMap.set(GreetingPreset.goodbye, styles.greetingGoodbye);
-greetStyleMap.set(GreetingPreset.hey, styles.greetingHey);
-
-var Greeting = exports.Greeting = function (_React$Component) {
-    _inherits(Greeting, _React$Component);
-
-    function Greeting(props) {
-        _classCallCheck(this, Greeting);
-
-        return _possibleConstructorReturn(this, (Greeting.__proto__ || Object.getPrototypeOf(Greeting)).call(this, props));
+})(GreetingPreset || (GreetingPreset = {}));
+let greetStyleMap = new Map();
+greetStyleMap.set(GreetingPreset.hello, __WEBPACK_IMPORTED_MODULE_2__styles_scss__["greetingHello"]);
+greetStyleMap.set(GreetingPreset.goodbye, __WEBPACK_IMPORTED_MODULE_2__styles_scss__["greetingGoodbye"]);
+greetStyleMap.set(GreetingPreset.hey, __WEBPACK_IMPORTED_MODULE_2__styles_scss__["greetingHey"]);
+class Greeting extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+    constructor(props) {
+        super(props);
     }
+    render() {
+        let greetName = this.props.greeting.toString();
+        let greetText = __WEBPACK_IMPORTED_MODULE_1__presets_json___default.a[greetName];
+        let s = greetStyleMap.get(this.props.greeting);
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: s }, greetText));
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Greeting;
 
-    _createClass(Greeting, [{
-        key: "render",
-        value: function render() {
-            var greetName = this.props.greeting.toString();
-            var greetText = _presets2.default[greetName];
-            var s = greetStyleMap.get(this.props.greeting);
-            return React.createElement("div", { className: s }, greetText);
-        }
-    }]);
 
-    return Greeting;
-}(React.Component);
 
 /***/ }),
 /* 186 */
@@ -22495,8 +22466,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!./styles.css", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!./styles.css");
+		module.hot.accept("!!../../../node_modules/typings-for-css-modules-loader/lib/index.js??ref--2-1!../../../node_modules/pleeease-loader/index.js??ref--2-2!../../../node_modules/sass-loader/lib/loader.js!./styles.scss", function() {
+			var newContent = require("!!../../../node_modules/typings-for-css-modules-loader/lib/index.js??ref--2-1!../../../node_modules/pleeease-loader/index.js??ref--2-2!../../../node_modules/sass-loader/lib/loader.js!./styles.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -22509,15 +22480,22 @@ if(false) {
 /* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(189)(undefined);
+exports = module.exports = __webpack_require__(189)(true);
 // imports
 
 
 // module
-exports.push([module.i, ".greeting-hello, .greeting-goodbye, .greeting-hey {\n  font-family: \"Avenir\";\n  font-size: 18;\n  font-weight: 500;\n  padding: 20px;\n  border-radius: 10px;\n  box-shadow: none;\n  transition: 0.5s all; }\n  .greeting-hello:hover, .greeting-goodbye:hover, .greeting-hey:hover {\n    box-shadow: 0 7px 0px; }\n\n.greeting-hello {\n  color: #8ea6e6;\n  background-color: #0e349a; }\n\n.greeting-goodbye {\n  color: #bc7fdc;\n  background-color: #59107f; }\n\n.greeting-hey {\n  color: #7fdcc6;\n  background-color: #107f64; }\n", ""]);
+exports.push([module.i, "._1fdC9Xq0mNRdWnvz6ceu5I,._1sQ_XI8gU5ejQK7lP3QESq,._2pAcTWMYULERGKfKy5zSsp{font-family:Avenir;font-size:18;font-weight:500;padding:20px;border-radius:10px;box-shadow:none;transition:.5s all}._1fdC9Xq0mNRdWnvz6ceu5I:hover,._1sQ_XI8gU5ejQK7lP3QESq:hover,._2pAcTWMYULERGKfKy5zSsp:hover{box-shadow:0 7px 0}._1fdC9Xq0mNRdWnvz6ceu5I{color:#8ea6e6;background-color:#0e349a}._1sQ_XI8gU5ejQK7lP3QESq{color:#bc7fdc;background-color:#59107f}._2pAcTWMYULERGKfKy5zSsp{color:#7fdcc6;background-color:#107f64}", "", {"version":3,"sources":["/Users/jessiemindel/Desktop/Programming_and_Games/Programming/Web_Dev/Learning/Lynda/Ex_Files_React_EssT/React + TS + Webpack (focus) + Gulp4 + Babel + CSS/src/raw/components/styles.scss"],"names":[],"mappings":"AAAA,2EAAgD,mBAAmB,aAAa,gBAAgB,aAAa,mBAAmB,gBAAgB,kBAAkB,CAAC,6FAAkE,kBAAkB,CAAC,yBAAgB,cAAc,wBAAwB,CAAC,yBAAkB,cAAc,wBAAwB,CAAC,yBAAc,cAAc,wBAAwB,CAAC","file":"styles.scss","sourcesContent":[".greeting-hello,.greeting-goodbye,.greeting-hey{font-family:Avenir;font-size:18;font-weight:500;padding:20px;border-radius:10px;box-shadow:none;transition:.5s all}.greeting-hello:hover,.greeting-goodbye:hover,.greeting-hey:hover{box-shadow:0 7px 0}.greeting-hello{color:#8ea6e6;background-color:#0e349a}.greeting-goodbye{color:#bc7fdc;background-color:#59107f}.greeting-hey{color:#7fdcc6;background-color:#107f64}"],"sourceRoot":""}]);
 
 // exports
-
+exports.locals = {
+	"greeting-hello": "_1fdC9Xq0mNRdWnvz6ceu5I",
+	"greetingHello": "_1fdC9Xq0mNRdWnvz6ceu5I",
+	"greeting-goodbye": "_1sQ_XI8gU5ejQK7lP3QESq",
+	"greetingGoodbye": "_1sQ_XI8gU5ejQK7lP3QESq",
+	"greeting-hey": "_2pAcTWMYULERGKfKy5zSsp",
+	"greetingHey": "_2pAcTWMYULERGKfKy5zSsp"
+};
 
 /***/ }),
 /* 189 */
