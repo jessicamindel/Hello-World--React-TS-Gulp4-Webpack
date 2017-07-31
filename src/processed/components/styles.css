@@ -1,32 +1,22 @@
-.greetingHello {
+.greeting-hello, .greeting-goodbye, .greeting-hey {
+  font-family: "Avenir";
+  font-size: 18;
+  font-weight: 500;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: none;
+  transition: 0.5s all; }
+  .greeting-hello:hover, .greeting-goodbye:hover, .greeting-hey:hover {
+    box-shadow: 0 7px 0px; }
+
+.greeting-hello {
   color: #8ea6e6;
-  background-color: #0e349a;
-  font-family: "Avenir";
-  font-size: 18;
-  font-weight: 500;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: none;
-  transition: 0.5s all; }
+  background-color: #0e349a; }
 
-.greetingGoodbye {
+.greeting-goodbye {
   color: #bc7fdc;
-  background-color: #59107f;
-  font-family: "Avenir";
-  font-size: 18;
-  font-weight: 500;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: none;
-  transition: 0.5s all; }
+  background-color: #59107f; }
 
-.greetingHey {
+.greeting-hey {
   color: #7fdcc6;
-  background-color: #107f64;
-  font-family: "Avenir";
-  font-size: 18;
-  font-weight: 500;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: none;
-  transition: 0.5s all; }
+  background-color: #107f64; }

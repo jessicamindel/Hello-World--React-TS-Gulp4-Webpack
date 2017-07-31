@@ -9,7 +9,7 @@ var config = {
     },
 
     resolve: {
-        extensions: [".ts", ".tsx", ".js"]
+        extensions: [".ts", ".tsx", ".js", ".css"]
     },
 
     devtool: "source-map",
@@ -19,7 +19,7 @@ var config = {
             {
                 test: /\.js$/,
                 include: [
-                    path.resolve(__dirname, "src/raw")
+                    path.resolve(__dirname, "src/processed")
                 ],
                 use: {
                     loader: "babel-loader",
@@ -31,7 +31,7 @@ var config = {
             {
                 test: /\.json$/,
                 include: [
-                    path.resolve(__dirname, "src/raw")
+                    path.resolve(__dirname, "src/processed")
                 ],
                 use: {
                     loader: "json-loader"
