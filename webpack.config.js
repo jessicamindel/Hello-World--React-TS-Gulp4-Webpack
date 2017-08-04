@@ -4,15 +4,13 @@ var config = {
     entry: ["./src/index.tsx"],
 
     output: {
-        path: path.resolve(__dirname, "build/js"),
+        path: path.resolve(__dirname, "build"),
         filename: "bundle.js"
     },
 
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx", ".css", ".scss", ".json"]
     },
-
-    devtool: "source-map",
 
     module: {
         rules: [
@@ -22,14 +20,8 @@ var config = {
                     path.resolve(__dirname, "src")
                 ],
                 use: [ 
-                    // {
-                    //     loader: "babel-loader",
-                    //     options: {
-                    //         presets: ["es2015"] // Might need to change this...
-                    //     }
-                    // }
+                    { loader: "babel-loader" },
                     { loader: "awesome-typescript-loader" }
-                    // TODO: Add .babelrc to take care of transpiling more fully, and set options as per https://github.com/s-panferov/awesome-typescript-loader
                 ]
             },
             {
@@ -67,7 +59,9 @@ var config = {
                 ]
             }
         ]
-    }
+    },
+
+    plugins: [],
 };
 
 module.exports = config;
