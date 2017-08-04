@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "prod": "webpack",
+    "dev": "webpack-dev-server --inline --hot",
+    "prod": "webpack -p",
     "gulp": "./node_modules/gulp/bin/gulp.js"
   },
   "author": "Jessie Mindel",
@@ -21,6 +21,7 @@
     "browser-sync": "^2.18.13",
     "css-loader": "^0.28.4",
     "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-util": "^3.0.8",
     "json-loader": "^0.5.7",
     "pleeease-loader": "^1.0.0",
     "sass-loader": "^6.0.6",
