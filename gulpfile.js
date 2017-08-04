@@ -13,9 +13,7 @@
     var argv = require("yargs").argv;
 
     var plugins = {
-        webpackStream:  require("webpack-stream"),
-        browserSync:    require("browser-sync"),
-        gutil:          require("gulp-util")
+        gutil: require("gulp-util")
     };
 
     var globs = {
@@ -33,7 +31,10 @@
     var wp = {
         webpack:            require("webpack"),
         WebpackDevServer:   require("webpack-dev-server"),
-        devPort:            9000,
+        dev: {
+            port: 9000,
+            directory: "build/activityCounter/"
+        },
         config: {
             raw:    require("./webpack.config.js"),
             rawObj: {}, prod: {}, dev: {}, server: {}
@@ -72,46 +73,6 @@
 // endregion
 
 // =============================================================================
-// TASKS :: WEBPACK (OLD)
-// =============================================================================
-
-/**
- * @name webpack
- * @desc Bundles everything with Webpack. Transpiles TS, processes SCSS (and adds TS types for it), and bundles JSON.
- */
-var task_webpack = gulp.task("webpack-stream", function() {
-    return gulp.src(globs.entry)
-        .pipe(plugins.webpackStream(require("./webpack.config.js"), wp.webpack))
-        .pipe(gulp.dest(globs.wpBuild));
-});
-
-// Starts browsersync's live dev server.
-function startBS() {
-    plugins.browserSync.init({
-        server: {
-            baseDir: "./build/",
-            index: "./index.html"
-        }
-    });
-}
-
-var task_bsReload = gulp.task("bs-reload", gulp.series("webpack-stream", function(cb) {
-    plugins.browserSync.reload();
-    cb();
-}));
-
-/**
- * @name live-dev
- * @desc Starts the browsersync livereload server.
- */
-var task_liveDev = gulp.task("live-dev", function() {
-    startBS();
-    var watch_ts = gulp.watch(globs.ts, gulp.series("bs-reload"));
-    var watch_json = gulp.watch(globs.json, gulp.series("bs-relaod"));
-    var watch_sass = gulp.watch(globs.sass, gulp.series("bs-reload"));
-});
-
-// =============================================================================
 // TASKS :: WEBPACK
 // =============================================================================
 
@@ -139,9 +100,10 @@ gulp.task("wb", gulp.series("webpack:build"));
 gulp.task("webpack:server", function(cb) {
     var chosenConfig = wp.config.server; // Includes dev server config
     var server = new wp.WebpackDevServer(wp.webpack(chosenConfig));
-    server.listen(wp.devPort, "localhost", function(err) {
+    var dir = (argv.sitemap) ? "" : ((argv.dir && typeof argv.dir == "string") ? argv.dir : wp.dev.directory);
+    server.listen(wp.dev.port, "localhost", function(err) {
             if(err) throw new plugins.gutil.PluginError("webpack-dev-server", err);
-            plugins.gutil.log("[webpack:server]", `http://localhost:${wp.devPort}/webpack-dev-server/${(argv.sitemap || argv.m) ? "" : "build"}`);
+            plugins.gutil.log("[webpack:server]", `http://localhost:${wp.dev.port}/webpack-dev-server/${dir}`);
     });
 });
 

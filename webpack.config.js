@@ -1,11 +1,16 @@
 var path = require("path");
 
 var config = {
-    entry: ["./src/index.tsx"],
+    //entry: ["./src/index.tsx"],
+    // Literal sorcery. https://github.com/webpack/webpack/issues/1189
+    entry: {
+        "build/helloWorld/bundle": "./src/helloWorld/index.tsx",
+        "build/activityCounter/bundle": "./src/activityCounter/index.tsx"
+    },
 
     output: {
-        path: path.resolve(__dirname, "build"),
-        filename: "bundle.js"
+        path: path.resolve(__dirname), //path.resolve(__dirname, "build"),
+        filename: "[name].js" //"bundle.js"
     },
 
     resolve: {
