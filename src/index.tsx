@@ -19,7 +19,7 @@ const root = document.getElementById("react-container");
 
 ReactDOM.render(
     <div>
-        <Greeting greeting={GreetingPreset.goodbye} />
+        <Greeting greeting={GreetingPreset.hello} />
         <br/>
         <Greeting greeting={GreetingPreset.goodbye} />
         <br/>
